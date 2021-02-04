@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica em JQuery</title>
+
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript">
+        /* Metodos de Inicializacao */ 
+        $(document).ready(function() {
+            //Depois que uma pagina foi inicializada, antes dos elementos carregarem, traz o DOM
+
+            //Estrutura JQuery - Muda a cor do H1 para laranja - Slecção = $('elemento').acao(Funçaõ ou Parametros);
+            /*
+            $('#titulo').css("color", "#f66");
+            $('h1').hide();
+            $('h1').delay('1000');
+            $('h1').fadeIn("slow");
+            $('#titulo').text("Hello World");
+            */
+
+            //Metodo Inline
+            //$('h1').css("color", "#f66").hide().delay("1000").fadeIn("slow").text("Inline");
+
+            //Metodo rm Bloco
+            $('h1')
+                .css("color", "#f66")
+                .hide()
+                .delay("1000")
+                .fadeIn("slow")
+                .text("Inline")
+                .click(function() {
+                    $('body').css("background", "#C30");
+                    $(this)
+                    .css("color", "#fff")
+                    .text("Clicou Aqui");
+                });
+
+
+            //Colocando mais de 1 atributo CSS
+            $('a').css({color: 'red', display: 'block'});
+            $('.link2').css("color", "green");
+            $('#link3').css("color", "black");
+            //Usando os asterisco (*) serve para representar a pagina toda
+            $('*').css("padding", "10");
+
+            $('h1, #link3').css('border-bottom', "solid 3px blue");
+
+        });
+
+    </script>
+
+</head>
+<body>
+
+    <h1 id="titulo">Hello</h1>
+    <h1>Lore Ipsum</h1>
+
+    <a href="#">Link 1</a>
+    <a href="#" class="link2">Link 2</a>
+    <a href="" id="link3">Link 3</a>
+    
+</body>
+</html>
