@@ -17,6 +17,25 @@
             $('p').css({margin: '0', color: 'blue'});
             $('.div1').css({'margin-bottom': '20px', background: '#ccc'});   //Paklavras compostas no CSS vão entre aspas
 
+            //Filhas
+            $('.div1 span')
+                .hide()
+                .delay("1000")
+                .fadeIn("slow")
+                .css({color: 'green', fontsize: '15px'});
+            
+            $('.div1 h2')
+                .hide()
+                .css({'font-size': '50px', color: 'red'})
+                .fadeIn(800)
+
+            //Filhas Diretas de um Elemento (>) - Quanto mais '>' mais fundo ele vai no elemento
+            $('.div1 > span').css({color: 'red'});
+            //Primeiro elemento após o selecionado - No caso seleciona o próximo elemento p depois dele
+            $('.p1 + p').css({'font-size': '25px'});
+            //Atacando todos os elementos após um elemento
+            $('.p1 ~ p').css({color: 'orange'});
+
         });
     
     </script>
@@ -24,8 +43,8 @@
 <body>
     <div class="div1">
         <h2>H2 Filho do Div1</h2>
-        <p>P Filho do Div1 <span>SOAN Filho do Div1</span></p>
-        <span>SPAN Filho do Div1</span>
+        <p>P Filho do Div1 <span>SOAN Filho não Direto do Div1</span></p>
+        <span>SPAN Filho Direto do Div1</span>
     </div>
     <h2>H2 Fora do Div1</h2>
     <p class="p1">P1 Fora da Div1</p>
