@@ -26,24 +26,32 @@ $(function() {
 
 
     var ex = $('.ex1');
+
     /*
-    //Sempre que uma tecla principal for digitada, mas com delay
-    $('.key').keypress(function() {
-        ex.text($(this).val());
+    $('.ev1').focus(function() {
+        ex.text($(this).attr('title'));
+    }).keyup(function() {
+        if($(this).val() == 'pontocom'){
+            $('.ev2').focus();
+        }
+    });
+
+    //Foco retirado do Formulario
+    $('.ev1').blur(function() {
+        ex.text('Saída do Campo: ' + $(this).attr('name'));
     });
     */
 
-    /*
-    //Sempre que uma tecla qualquer for pressionada, mas com delay
-    $('.key').keydown(function() {
-        ex.text($(this).val());
-    });
-    */
-
-    //Sempre que uma tecla qualquer for pressionada, em tempo real
-    $('.key').keyup(function() {
-        ex.text($(this).val());
+    $('.ev1').change(function() {
+        ex.text('Campo Alterado: ' + $(this).val());
     });
 
+
+    $('.selecionar').click(function() {
+        $('.ev3').select();
+        $('form').submit(function() {
+            return false;
+        });
+    });
     
 });
