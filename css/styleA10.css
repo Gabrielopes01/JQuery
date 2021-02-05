@@ -1,0 +1,37 @@
+body {
+    font: 14px;
+}
+
+.ex1, .ex2 {
+    width: 460px;
+    padding: 20px;
+    background-color: #1E90FF;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;  
+    border-top: 1px solid white; 
+}
+
+p, input, button {
+    width: 480px;
+    padding: 5px;
+    background-color: #000;
+    margin: 0 auto;
+    text-align: center;
+    border: 5px solid #ccc;
+    margin-top: 5px;
+    color: #fff;
+}
+
+input, button {
+    margin: 5px 425px;
+}
+
+button {
+    width: 500px;
+}
+
+button:hover {
+    background-color: #ccc;
+    color: black;
+}
