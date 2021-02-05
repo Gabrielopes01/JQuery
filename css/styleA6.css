@@ -11,11 +11,22 @@ body {
     color: #fff;   
 }
 
-p, input{
+p {
     width: 480px;
     padding: 5px;
     background-color: #000;
     margin: 0 auto;
+    text-align: center;
+    border: 5px solid #ccc;
+    margin-top: 5px;
+    color: #fff;
+}
+
+input {
+    width: 480px;
+    padding: 5px;
+    background-color: #000;
+    margin: 0 425px;
     text-align: center;
     border: 5px solid #ccc;
     margin-top: 5px;
